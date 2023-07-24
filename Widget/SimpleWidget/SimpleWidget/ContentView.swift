@@ -8,12 +8,32 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var imageURL: URL?
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            AsyncImage(url: imageURL) { phase in
+                if case .success(let image) = phase {
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                }
+            }
+        }.onAppear {
+            Task {
+                let url = URL(string: "https://api.jsonbin.io/v3/b/64be53208e4aa6225ec29c5a")!
+                
+                do {
+                    let record: Record = try await WidgetService().fetchData(url: url)
+                    DispatchQueue.main.async {
+                        imageURL = URL(string: record.image)
+                    }
+                }
+                catch {
+                    print("error")
+                }
+                
+                
+            }
         }
         .padding()
     }
