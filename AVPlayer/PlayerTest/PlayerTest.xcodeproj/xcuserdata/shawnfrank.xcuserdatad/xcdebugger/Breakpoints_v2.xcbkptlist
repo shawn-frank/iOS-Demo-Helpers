@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "DD1B58D7-CA3F-4746-8A28-0EA80F04F9E7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DBF39FA2-B2AF-4806-AE45-FBDC53FB42CE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PlayerTest/Player/AudioPlayer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "configurePlayerWithLocalURL()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DBF39FA2-B2AF-4806-AE45-FBDC53FB42CE - a5df41d8cda90efe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PlayerTest.AudioPlayer.configurePlayerWithLocalURL() -&gt; ()"
+                  moduleName = "PlayerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shawnfrank/Desktop/Dev/Apple/Hackathon/iOS-Demo-Helpers/AVPlayer/PlayerTest/PlayerTest/Player/AudioPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "876">
+               </Location>
+               <Location
+                  uuid = "DBF39FA2-B2AF-4806-AE45-FBDC53FB42CE - a5df41d8cda90edd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PlayerTest.AudioPlayer.configurePlayerWithLocalURL() -&gt; ()"
+                  moduleName = "PlayerTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shawnfrank/Desktop/Dev/Apple/Hackathon/iOS-Demo-Helpers/AVPlayer/PlayerTest/PlayerTest/Player/AudioPlayer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "476">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
