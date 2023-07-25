@@ -10,19 +10,21 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button("Play local") {
+                if let soundURLString = Bundle.main.path(forResource: "sample",
+                                                         ofType: "mp3") {
+                    AudioPlayerManager.shared.configurePlayer(withStreamURL: soundURLString, andPlaybackSource: .local)
+                }
+            }
+            .padding()
+            
+            Button("Play remote") {
+                if let remoteURL = URL(string: "https://ice1.somafm.com/groovesalad-128-mp3") {
+                    AudioPlayerManager.shared.configurePlayer(withStreamURL: remoteURL.absoluteString, andPlaybackSource: .remote)
+                }
+            }
         }
         .padding()
-        .onAppear {
-            if let soundURLString = Bundle.main.path(forResource: "sample",
-                                                     ofType: "mp3") {
-                AudioPlayerManager.shared.configurePlayer(withStreamURL: soundURLString, andPlaybackSource: .local)
-            }
-            
-        }
     }
 }
 
