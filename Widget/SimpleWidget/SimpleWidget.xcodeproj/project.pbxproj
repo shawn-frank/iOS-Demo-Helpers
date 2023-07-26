@@ -27,6 +27,8 @@
 		2BFB74AD2A6E9C150081A4B9 /* WidgetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFB74412A6E8B2E0081A4B9 /* WidgetModel.swift */; };
 		2BFB74AE2A6E9C610081A4B9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFB743C2A6E86E80081A4B9 /* NetworkService.swift */; };
 		2BFB74AF2A6E9C610081A4B9 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFB743D2A6E86E80081A4B9 /* NetworkErrors.swift */; };
+		2BFD58582A71425900480AA6 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD58562A71425900480AA6 /* AudioPlayer.swift */; };
+		2BFD58592A71425900480AA6 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD58572A71425900480AA6 /* AudioPlayerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,9 @@
 		2BFB74A02A6E98EA0081A4B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2BFB74A22A6E98EA0081A4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BFB74A92A6E99AA0081A4B9 /* MediumSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumSizeView.swift; sourceTree = "<group>"; };
+		2BFD58542A713EEE00480AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2BFD58562A71425900480AA6 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		2BFD58572A71425900480AA6 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +121,8 @@
 		2BFB742C2A6E863C0081A4B9 /* SimpleWidget */ = {
 			isa = PBXGroup;
 			children = (
+				2BFD58552A71425900480AA6 /* Player */,
+				2BFD58542A713EEE00480AA6 /* Info.plist */,
 				2BFB74402A6E8B200081A4B9 /* Models */,
 				2BFB743B2A6E86DE0081A4B9 /* Network */,
 				2BFB742D2A6E863C0081A4B9 /* SimpleWidgetApp.swift */,
@@ -172,6 +179,16 @@
 				2BFB74A22A6E98EA0081A4B9 /* Info.plist */,
 			);
 			path = WidgetExtension;
+			sourceTree = "<group>";
+		};
+		2BFD58552A71425900480AA6 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD58562A71425900480AA6 /* AudioPlayer.swift */,
+				2BFD58572A71425900480AA6 /* AudioPlayerManager.swift */,
+			);
+			name = Player;
+			path = ../../../AVPlayer/PlayerTest/PlayerTest/Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +295,11 @@
 				2BFB74762A6E92670081A4B9 /* TimerActivity.swift in Sources */,
 				2BFB74302A6E863C0081A4B9 /* ContentView.swift in Sources */,
 				2BFB743F2A6E86E80081A4B9 /* NetworkErrors.swift in Sources */,
+				2BFD58582A71425900480AA6 /* AudioPlayer.swift in Sources */,
 				2BFB74422A6E8B2E0081A4B9 /* WidgetModel.swift in Sources */,
 				2BFB74442A6E8CD10081A4B9 /* WidgetService.swift in Sources */,
 				2BFB743E2A6E86E80081A4B9 /* NetworkService.swift in Sources */,
+				2BFD58592A71425900480AA6 /* AudioPlayerManager.swift in Sources */,
 				2BFB742E2A6E863C0081A4B9 /* SimpleWidgetApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,11 +455,13 @@
 				DEVELOPMENT_TEAM = 7QNUJ3KXAJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleWidget/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,11 +487,13 @@
 				DEVELOPMENT_TEAM = 7QNUJ3KXAJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleWidget/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,6 +519,7 @@
 				INFOPLIST_FILE = WidgetExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "AFR for you";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -523,6 +547,7 @@
 				INFOPLIST_FILE = WidgetExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "AFR for you";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

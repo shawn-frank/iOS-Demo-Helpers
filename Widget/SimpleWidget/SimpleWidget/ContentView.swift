@@ -18,7 +18,17 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                 }
             }
-        }.onAppear {
+        }
+        .onOpenURL(perform: { url in
+            print(url.absoluteString)
+        })
+        .onAppear {
+            
+            if let remoteURL = URL(string: "https://ice1.somafm.com/groovesalad-128-mp3") {
+                print(remoteURL)
+                AudioPlayerManager.shared.configurePlayer(withStreamURL: remoteURL.absoluteString, andPlaybackSource: .remote)
+            }
+            
             Task {
                 let url = URL(string: "https://api.jsonbin.io/v3/b/64be53208e4aa6225ec29c5a")!
                 

@@ -120,7 +120,7 @@ extension AudioPlayerManager {
     
     func updateNowPlayingView()
     {
-      let image = UIImage(named: "now_playing_image")!
+      let image = UIImage(named: "now_playing_image") ?? UIImage()
       
       let artwork = MPMediaItemArtwork(boundsSize: image.size) { size in
         
